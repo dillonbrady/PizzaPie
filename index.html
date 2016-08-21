@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pie</title>
+
+  <link href="dist/css/vendor/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="dist/css/vendor/foundation.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="dist/css/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/vendor/snap.svg.js"></script>
+  <script src="js/jquery.pizza.js"></script>
+  <script src="dist/js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Graphs</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 small-4 columns">
+      <ul data-pie-id="my-cool-chart">
+        <li data-value="36">Pepperoni</li>
+        <li data-value="14">Sausage</li>
+        <li data-value="8">Cheese</li>
+        <li data-value="11">Mushrooms</li>
+        <li data-value="7">Chicken</li>
+        <li data-value="24">Other</li>
+      </ul>
+      <div id="my-cool-chart"></div>
+    </div>
+    <div class="large-8 small-8 columns">
+      <div id="line" style="height: 450px;"></div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <script src="dist/js/vendor/dependencies.js"></script>
+  <script src="dist/js/pizza.js"></script>
+  <script>
+    $(window).load(function() {
+      Pizza.init('#my-cool-chart', {
+        data: [23, 43, 17, 7, 11]
+      });
+      $(document).foundation();
+    });
+  </script>
+</body>
+</html>
